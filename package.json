@@ -1,27 +1,29 @@
 {
   "name": "synchrosource",
   "version": "0.1.0",
+  "description": "371-OS: Revolutionary Autonomous Agent Operating System",
   "private": true,
   "type": "module",
-  "packageManager": "bun@latest",
+  "packageManager": "bun@1.2.18",
   "workspaces": [
     "packages/*",
     "apps/*"
   ],
-  "main": "src/index.tsx",
-  "module": "src/index.tsx",
   "scripts": {
-    "dev": "bun --hot src/index.tsx",
-    "build": "bun build ./src/index.html --outdir=dist --sourcemap --target=browser --minify --define:process.env.NODE_ENV='\"production\"' --env='BUN_PUBLIC_*'",
-    "start": "NODE_ENV=production bun src/index.tsx"
-  },
-  "dependencies": {
-    "react": "^19",
-    "react-dom": "^19"
+    "dev": "bun run --hot apps/api-gateway/server.ts",
+    "test": "bun test",
+    "build": "tsup",
+    "lint": "biome check .",
+    "lint:apply": "biome check --apply ."
   },
   "devDependencies": {
-    "@types/react": "^19",
-    "@types/react-dom": "^19",
-    "@types/bun": "latest"
+    "@biomejs/biome": "1.8.3",
+    "@types/node": "^20.x",
+    "tsup": "^8.0.0",
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "hono": "^4.0.0",
+    "zod": "^3.23.0"
   }
 }
