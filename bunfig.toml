@@ -1,2 +1,17 @@
-[serve.static]
-env = "BUN_PUBLIC_*"
+# SynchroSource Bun Optimization Configuration
+# Targeting 50x performance improvement over standard Node.js
+
+[install]
+cache = true
+lockfile = true
+
+[run]
+enableCrossSudo = false
+
+[test]
+# Faster testing profile
+coverage = true
+
+[runtime]
+# Environment variables for cognitive engine
+env = { NODE_ENV = "development", RUNTIME = "bun" }

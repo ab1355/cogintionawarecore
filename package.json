@@ -10,7 +10,8 @@
     "apps/*"
   ],
   "scripts": {
-    "dev": "bun run --hot apps/api-gateway/server.ts",
+    "dev": "PORT=5501 bun run --hot src/index.tsx",
+    "dev:gateway": "PORT=5501 bun run --hot apps/api-gateway/server.ts",
     "test": "bun test",
     "build": "tsup",
     "lint": "biome check .",
@@ -24,6 +25,11 @@
   },
   "dependencies": {
     "hono": "^4.0.0",
-    "zod": "^3.23.0"
+    "zod": "^3.23.0",
+    "lucide-react": "^0.454.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "@types/react": "^18.3.12",
+    "@types/react-dom": "^18.3.1"
   }
 }

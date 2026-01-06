@@ -47,10 +47,17 @@ The system manages four primary ventures:
 - **Deployment**: Containerized with Akash deployment configurations
 
 ## Project Structure
-- **AB/**: Core application interface (contains conceptual.md React component)
-- **src/**: Source code files
-- **packages/**: Monorepo packages (workspace)
+- **AB/**: Personal workspace for user-to-agent file exchange
+- **src/**: Frontend source code files (React application)
 - **apps/**: Monorepo applications (workspace)
+  - **api-gateway/**: API gateway server (Hono-based)
+- **packages/**: Monorepo packages (workspace)
+  - **agents/**: Cognitive agent implementations
+    - **c-suite/**: C-Suite agent logic (CEO Mimi, CTO Zara, etc.)
+    - **types/**: Type definitions for agent system
+    - **factory.ts**: Agent Factory for dynamic agent spawning
+- **core/**: Core system modules
+  - **economics.ts**: Internal economics framework with wallet generation
 - **config/**: Configuration files
 - **docs/**: Documentation
 - **tests/**: Test files
@@ -77,6 +84,10 @@ The system manages four primary ventures:
 - Cognitive-aware processing
 - Blockchain-based governance
 - Cost-optimized cloud infrastructure
+- Dynamic agent spawning via Agent Factory
+- Internal economics framework with wallet generation
+- Automatic scaling based on system complexity
+- Economic tracking for all agent entities
 
 ## Repository Information
 - **Name**: synchrosource
